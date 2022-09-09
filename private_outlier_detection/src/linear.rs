@@ -27,4 +27,8 @@ impl LinearRegression {
 
         Self { coefficients }
     }
+
+    pub fn predict(&self, x: Node) -> Node {
+        x.matmul(self.coefficients.clone()).unwrap()
+    }
 }
