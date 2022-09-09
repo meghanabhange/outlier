@@ -1,0 +1,8 @@
+[package]
+name = "private_outlier_detection"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ciphercore-base = "0.1.0"
+serde_json = "1.0.81"
