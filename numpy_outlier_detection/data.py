@@ -10,9 +10,9 @@ def load_data(data_path="inputs.json"):
     with open(data_path) as f:
         inputs = json.load(f)
     data = np.array(inputs[0]["value"])
-    x = np.array(data[:, 0])
-    y = np.array(data[:, 1])
-    x = x.reshape(-1, 1)
+    x = np.array(data[:, :-1])
+    y = np.array(data[:, -1])
+    x = x.reshape(-1, len(x[0]))
     y = y.reshape(-1, 1)
     return x, y
 
